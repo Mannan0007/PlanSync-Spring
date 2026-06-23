@@ -1,0 +1,103 @@
+.main-div {
+    background-color: #0F172A;
+}
+
+.my-task-div {
+    /* border: 2px solid white; */
+    min-height: 30vh;
+    background-color: #0F172A;
+    /* width: 100%; */
+}
+
+.center-div {
+    width: 90%;
+}
+
+.task-card {
+    background-color: #1e2a3a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.task-card:hover {
+    cursor: pointer;
+    background-color: #303843;
+}
+
+.outer-div-breif {
+    background-color: #404652;
+    border-radius: 8px;
+    align-content: center;
+}
+
+.breif-task {
+    border-radius: 8px;
+    background-color: #23262b;
+}
+
+.task-heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.task-description {
+    font-size: 16px;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.priority-tag-low {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+.priority-tag-medium {
+    background-color: #FFC107;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.priority-tag-high {
+    background-color: #F44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.priority-tag {}
+
+.TaskModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.inner-modal {
+    width: 40%;
+    /* text-align: center; */
+    color: white;
+    background: linear-gradient(135deg, #040B1D, #0A1A3A, #020617);
+    padding: 10px;
+}
+
+.inner-modal input {
+    border-radius: 5px;
+}
+
+.crossbtn {
+    height: 10px;
+}

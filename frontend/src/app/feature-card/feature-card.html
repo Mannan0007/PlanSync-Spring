@@ -1,0 +1,59 @@
+<div>
+    <!-- <div class="text-center main-card">
+        <h2 class="mb-4">What is PlanSync?</h2>
+        <h4>PlanSync is a productivity and collaboration platform designed to help individuals and teams efficiently manage their
+        work. Users can create tasks, track their personal progress, and organize goals in a streamlined workspace. Teams can be
+        formed to assign responsibilities, monitor task status, and gain visibility into who is working on what, ensuring
+        transparency and accountability. In addition, PlanSync provides features like note-taking, scheduling, and progress
+        insights, enabling users to stay organized and aligned throughout their workflow. Whether working solo or
+        collaboratively, PlanSync enhances planning, execution, and productivity.</h4>
+    </div> -->
+
+
+
+<div class="offer">
+    <div class="features-div">
+
+        <div class="image-container">
+            <div class="slider-track" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+
+                <!-- Each slide -->
+                <div class="slide" *ngFor="let feature of features">
+
+                    <div class="slide-content">
+
+                        <!-- Image -->
+                        <div class="image-section">
+                            <img [src]="feature.image" />
+                        </div>
+
+                        <!-- Text -->
+                        <div class="text-section">
+                            <h2>{{feature.title}}</h2>
+
+                            <ul>
+                                <li *ngFor="let point of feature.points">
+                                    {{point}}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="dots">
+            <div *ngFor="let feature of features; let i = index" class="dot" [class.active]="i === currentIndex"
+                (click)="goToSlide(i)"></div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>

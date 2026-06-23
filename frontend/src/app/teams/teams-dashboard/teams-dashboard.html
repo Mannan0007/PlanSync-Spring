@@ -1,0 +1,17 @@
+<div>
+    <span>
+        <h2>Mt Teams</h2>
+        <button (click)="openCreateTeam()">Create a team</button>
+    </span>
+    <div *ngIf="showcreateTeam">
+        <form action="" [formGroup]="team">
+            <label for="">Name your team</label>
+            <input type="text" name="" id="" formControlName="teamname">
+            <label for="">Number of members</label>
+            <input type="text" name="" id="" formControlName="size">
+            <label for="">Desciption</label>
+            <input type="text" name="" id="" formControlName="description">
+        </form>
+        <button (click)="createTeam()">Click</button>
+    </div>
+</div>

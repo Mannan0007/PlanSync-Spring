@@ -1,0 +1,47 @@
+.team-card {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.team-card-inner{
+    border: solid white;
+    border-radius: 10px ;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.team-card-inner form{
+    padding: 10px;
+    /* border: 1px solid white; */
+    /* border-radius: 10px; */
+    width: 50%;
+}
+
+.member-modal {
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.member-modal-inner{
+    border: solid white;
+    border-radius: 10px ;
+    color: black;
+    padding: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color:  rgba(17, 24, 39, 0.95);
+}
+.member-modal-inner form{
+    width: 50%;
+}
+.member-modal-inner input{
+    border-radius: 5px;
+}

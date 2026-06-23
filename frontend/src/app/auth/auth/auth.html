@@ -1,0 +1,46 @@
+<div class="d-flex flex-column main-container">
+    <!-- <div class="d-flex justify-content-center gap-2">
+        <button (click)="authProperty='login'" class="btn"
+            [ngClass]="{'btn-success': authProperty === 'login', 'btn-primary': authProperty !== 'login'}">
+            Login</button>
+        <button (click)="authProperty='register'" class="btn"
+            [ngClass]="{'btn-success':authProperty==='register','btn-primary':authProperty!=='register'}">Register</button>
+
+    </div> -->
+    <div *ngIf="authProperty=='login'"
+        class="login-form d-flex flex-column justify-content-center align-items-center p-2">
+        <form action="" class="d-flex flex-column p-2 " (ngSubmit)="onLogin()" #loginForm="ngForm">
+            <h3 class="text-center">Welcome back {{username}}</h3>
+            <label for="">Enter your username</label>
+            <input type="text" name="username" id="" [(ngModel)]="username">
+            <label for="">Please enter your password</label>
+            <input type="password" name="password" id="" [(ngModel)]="password">
+            <button type="submit" class="btn btn-success mt-2">Login</button>
+
+        </form>
+    </div>
+    <div *ngIf="authProperty=='register'"
+        class="register-form p-2 d-flex flex-column justify-content-center align-items-center">
+        <form action="" class="d-flex flex-column p-2 " (ngSubmit)="onRegister()">
+            <h3 class="text-center">Welcome to plansync,{{name}}</h3>
+            <label for="">Enter your name</label>
+            <input type="text" name="name" id="" [(ngModel)]="name">
+            <label for="">Enter your email</label>
+            <input type="mail" name="email" id="" [(ngModel)]="email">
+            <label for="">Choose a username</label>
+            <input type="text" name="username" id="" [(ngModel)]="username">
+            <label for="">Create a password</label>
+            <div>
+                <input [type]="maskingProperty?'password':'text'" name="password" id="" [(ngModel)]="password">
+            </div>
+            <label for="">Confirm your password</label>
+            <div>
+                <input [type]="maskingProperty?'password':'text'" name="password" id="">
+            </div>
+
+            <button type="submit" class="btn btn-success mt-2">Register</button>
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,13 @@
+.main-div{
+    /* background-image: url('/assets/Gemini_Generated_Image_dvm8wydvm8wydvm8.png'); */
+    background-repeat: no-repeat;
+        background-size: contain;
+        /* background-position: center; */
+        min-height: 100vh;
+        width: 100%;
+        margin: 0;
+}
+
+#image{
+    height: 340px;
+}

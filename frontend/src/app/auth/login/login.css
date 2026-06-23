@@ -1,0 +1,38 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  /* height: 50vh; */
+}
+
+.img-container {
+  width: 65%;
+}
+
+.login-form {
+  width: 40%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form form {
+  width: 60%;
+  /* height: 34%; */
+  border-radius: 10px;
+  background-color: #464646;
+  padding: 10px;
+  box-shadow: 13px 13px 20px #000000;
+}
+
+.external-links {
+  gap: 10px;
+}
+
+.external-links a {
+  text-decoration: none;
+}
+
+.fs23 {
+  font-size: 23px;
+}

@@ -1,0 +1,43 @@
+<div class="main-div">
+    <div class="text-center m-5">
+        <h2>Hello {{name.name}}</h2>
+        <h5>Lets plan and organize your day to make it productive</h5>
+    </div>
+    <div class=" text-center">
+        <h3 *ngIf="upcomingTask">Your upcoming task</h3>
+        <h3 *ngIf="!upcomingTask">You don't have any upcoming task</h3>
+        <div class="d-flex gap-3 justify-content-center">
+            <button class="btn btn-success" (click)="AddTask()">Add a Task</button>
+            <a href="/">
+                <button class="btn btn-danger">Back</button>
+            </a>
+        </div>
+    </div>
+
+
+</div>
+<div class="outer-modal" *ngIf="showModal">
+    <form class="modal d-flex flex-column gap-3" [formGroup]="addingTask">
+        <label>Add a task</label>
+        <input type="text" class="form-control" placeholder="Enter your task" formControlName="task"/>
+
+        <label>Add a flag</label>
+        <select class="form-select" formControlName="flag">
+    <option value="" disabled selected hidden>Select</option>
+            <option>Studying</option>
+            <option>Office</option>
+            <option>Household</option>
+            <option>Personal Work</option>
+            <option>Other</option>
+        </select>
+
+        <div class="d-flex gap-2 justify-content-center mt-3">
+            <button type="button" class="btn btn-success" (click)="AddTaskToList()">Add</button>
+            <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="taskData">
+    {{ taskData.task }}
+</div>

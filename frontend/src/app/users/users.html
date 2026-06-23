@@ -1,0 +1,24 @@
+<!-- <div *ngFor="let user of database">
+    <h1>{{user}}</h1>
+</div> -->
+
+<div>
+<li *ngFor="let student of students;let i = index">
+    <p>{{i+1}} {{student}}</p>
+
+</li>
+</div>
+
+
+<div>
+    <h2 *ngFor="let user of database2" >
+        <p *ngIf="user.rollnum==20">{{user.rollnum}},{{user.name}}</p>
+    </h2>
+</div>
+
+<div *ngFor="let class of classes">
+    <h3>{{ class.name }}</h3>
+    <ul>
+        <li *ngFor="let student of class.students">{{ student }}</li>
+    </ul>
+</div>

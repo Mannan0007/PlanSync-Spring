@@ -1,0 +1,111 @@
+<div class="main-div d-flex w-100">
+    <div class="my-task-div p-3 d-flex w-50">
+        <div class="center-div">
+            <span class="d-flex justify-content-between mb-4">
+                <h3 class="text-center">Your Focus for today</h3>
+                <button class="btn btn-success " (click)="openTaskModal()">Add</button>
+            </span>
+            <div *ngFor="let task of tasks">
+                <div class="task-card mb-3" (click)="openTaskDetails(task)">
+                    {{task.title}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard  -->
+    <div class="outer-div-breif w-50 mt-5 me-4 p-1 pe-4 ps-4">
+        <div *ngIf="!aboutTask" class="d-flex justify-content-center align-items-center fw600">
+            Click on a task to open briefly
+        </div>
+        <div class="breif-task p-3" *ngIf="aboutTask">
+            <span class="d-flex justify-content-end mb-2">
+                <button class="btn btn-danger crossbtn" (click)="closeBreif()">X</button>
+            </span>
+            <div class="task-heading d-flex justify-content-between">
+                {{selectedTask.title}}
+                <div class="priority-tag" [ngClass]="'priority-tag-' + selectedTask.status.toLowerCase()">
+                    {{ selectedTask.status }}
+                </div>
+            </div>
+            <div class="task-description">
+                {{ selectedTask.description }}
+            </div>
+            <div class="priority-tag">
+                {{ selectedTask.status }}
+            </div>
+            <div class="additional-notes d-flex flex-column">
+                <label for="">Additional Notes</label>
+                <textarea name="" id="" maxlength="200"></textarea>
+            </div>
+        </div>
+    </div>
+
+</div>
+<ng-template #addTaskModal>
+    <div class="modal-header">
+        <h1 class="text-center">Add a Task</h1>
+    </div>
+    <div class="modal-content p-3" [formGroup]="TaskAddition">
+        <label for="">Title</label>
+        <input type="text" name="" id="" formControlName="title">
+        <label for="">Severity</label>
+        <select name="" id="" class="w-50" formControlName="category">
+            <option value="" disabled selected>Set a severity</option>
+            <option value="Personal">Low</option>
+            <option value="Work">Medium</option>
+            <option value="Home">High</option>
+        </select>
+        <label>Description</label>
+        <textarea name="" id="" formControlName="description"></textarea>
+        <label for="" class="mt-4">Would you like to set a deadline for this task?</label>
+
+        <div class="d-flex gap-2">
+            <label>
+                <input type="radio" value="Yes" formControlName="deadline" (change)="onDeadlineChange('Yes')">
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" value="No" formControlName="deadline" (change)="onDeadlineChange('No')">
+                No
+            </label>
+        </div>
+        <div *ngIf="hasDeadline">
+            <h2>Enter deadline</h2>
+            <input type="date" formControlName="endDate">
+        </div>
+        <div class="m-1 d-flex gap-2">
+            <button class="btn btn-success" type="submit" (click)="addTask()">Save</button>
+            <button class="btn btn-danger" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</ng-template>
+<!-- <div class="bg-light d-flex flex-column inner-modal">
+    <form [formGroup]="TaskAddition" class="d-flex flex-column" (ngSubmit)="addTask()">
+
+        <label for="">Add Task</label>
+        <input type="text" name="" id="" class="w-50" formControlName="title">
+
+        <label for="" class="mt-4">Would you like to set a deadline for this task?</label>
+
+        <div class="d-flex gap-2">
+            <label>
+                <input type="radio" value="Yes" formControlName="deadline" (change)="onDeadlineChange('Yes')">
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" value="No" formControlName="deadline" (change)="onDeadlineChange('No')">
+                No
+            </label>
+        </div>
+        <div *ngIf="hasDeadline">
+            <h2>Enter deadline</h2>
+            <input type="date" formControlName="endDate">
+        </div>
+        <div class="m-1 d-flex gap-2">
+            <button class="btn btn-success" type="submit">Save</button>
+            <button class="btn btn-danger" (click)="closeModal()">Cancel</button>
+        </div>
+    </form>
+</div> -->

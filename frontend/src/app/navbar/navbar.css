@@ -1,0 +1,94 @@
+.navbar {
+  /* margin: 1%; */
+  padding: 1rem 2rem;
+  /* border-radius: 12px; */
+  /* backdrop-filter: blur(15px); */
+  /* -webkit-backdrop-filter: blur(15px); */
+  /* background: rgba(255, 255, 255, 0.08);  */
+  background: linear-gradient(135deg, #040B1D, #0A1A3A, #020617);
+  /* background-color: black; */
+  background-color: #111827;
+  /* or any color you prefer */
+  border: 4px solid rgba(26, 25, 25, 0.2);
+  /* border: 2px solid white; */
+  /* border-radius: 12px; */
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: black;
+
+
+  z-index: 1000;
+}
+
+.profile_logo {
+  height: 40px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  color: #111827;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: popIn 0.3s ease;
+  width: 50%;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  background-color: #111827;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #2563eb;
+  /* blue accent */
+}
+
+.nav-links {
+  color: #fff;
+  width: 90%;
+}
+
+.nav-links span:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+/* simple animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

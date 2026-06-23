@@ -1,0 +1,15 @@
+.main-card{
+    background-color: transparent;
+    border: white solid 1px;
+        
+}
+.card-heading{
+    text-align: center;
+    border: white solid 1px;
+    background-color: transparent;
+}
+.card-text{
+    text-align: center;
+    background-color: transparent;
+    border: white solid 1px;
+}

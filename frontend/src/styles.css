@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Global Reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto", "Helvetica Neue", sans-serif;
+  color: #fff;
+  /* background-image: url('/assets/Gemini_Generated_Image_z47rowz47rowz47r.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+/* Inherit box sizing everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.error-modal-header {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 15px;
+}
+
+.success-modal-header {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header {
+  background-color: #0F172A;
+  color: #fff;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.modal-content {
+  background-color: #1e2a3a;
+  color: #fff;
+}
+
+.modal-content input {
+  width: 50%;
+}
+
+.error-validation {
+  color: #ff4d4d;
+  font-size: 0.9em;
+}
+
+
+/* 
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5) contrast(1.1);
+  background-color: #0a0a0a; /* fallback if video fails 
+}
+ */
+
+/* Optional dark overlay for contrast */
+/* body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+} */

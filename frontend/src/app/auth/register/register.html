@@ -1,0 +1,39 @@
+<div 
+    class="register-form p-2 d-flex flex-column justify-content-center align-items-center">
+    <form action="" class="d-flex flex-column p-2 " (ngSubmit)="onRegister()">
+        <h3 class="text-center">Welcome to plansync</h3>
+        <label for="">Enter your name</label>
+        <input type="text" name="name" id="" [(ngModel)]="name">
+        <label for="">Enter your email</label>
+        <input type="mail" name="email" id="" [(ngModel)]="email">
+        <label for="">Choose a username</label>
+        <input type="text" name="username" id="" [(ngModel)]="username">
+        <label for="">Create a password</label>
+        <div>
+            <input [type]="maskingProperty?'password':'text'" name="password" id="" [(ngModel)]="password">
+        </div>
+        <label for="">Confirm your password</label>
+        <div>
+            <input [type]="maskingProperty?'password':'text'" name="password" id="">
+        </div>
+
+        <button type="submit" class="btn btn-success mt-2">Register</button>
+
+        <a href="/login" class="text-center">Already have an account?</a>
+    </form>
+    <div class="modal" *ngIf="showModal">
+        <div class="modal-content">
+            <h2>Account Successfully created </h2>
+            <button (click)="closeModal()">OK</button>
+        </div>
+    </div>
+    <div class="modal" *ngIf="showError">
+        <div class="modal-content">
+            <h2>{{errorMessage}}</h2>
+            <button (click)="closeErrorModal()">OK</button>
+        </div>
+    </div>
+
+</div>
+
+

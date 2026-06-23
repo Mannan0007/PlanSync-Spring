@@ -1,0 +1,22 @@
+<div class="d-flex bg-dark">
+    <div class="currentDateTime p-2">
+        <h1>Greetings {{name.name}}</h1>
+        <h4>{{ currentDateTime | date: 'EEEE, dd MMM yyyy' }} <br>
+            {{ currentDateTime | date: 'hh:mm a' }}</h4>
+    </div>
+    <div class="d-flex flex-column gap-2 position-absolute end-0 bg-dark me-4 mt-2">
+        <!-- <button class="btn btn-primary">My Team</button> -->
+        <!-- <button class="btn btn-primary">Create a Team</button> -->
+        <button class="btn btn-primary">Notifications</button>
+    </div>
+</div>
+
+<div class="w-100">
+    <app-my-task></app-my-task>
+    <!-- <app-my-task></app-my-task> -->
+    <!-- <div class="d-flex ">
+        <app-recent-activity class="w-50"></app-recent-activity>
+    </div>
+    <app-upcoming-deadlines></app-upcoming-deadlines> -->
+
+</div>

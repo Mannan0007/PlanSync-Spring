@@ -1,0 +1,82 @@
+.main-container {
+    /* background-color: red; */
+    margin: 10%;
+    /* justify-content: center; */
+    /* padding: 50%; */
+
+}
+.login-form input,
+.register-form input {
+    /* width: 21%; */
+    border-radius: 5px;
+}
+
+.register-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: transparent; */
+    margin: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2%;
+    box-shadow: 5px 6px 22px white;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Modal box */
+.modal-content {
+    background: #fff;
+    color: #111827;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: popIn 0.3s ease;
+    width: 50%;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    background-color: #111827;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #2563eb;
+    /* blue accent */
+}
+
+/* simple animation */
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

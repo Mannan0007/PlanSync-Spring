@@ -1,0 +1,54 @@
+<div class="main-div">
+    <div  class="mt-5" *ngIf="!auth">
+    <app-home-content></app-home-content>
+        <app-feature-card></app-feature-card>
+    </div>
+
+    <!-- <div>
+      <h1>hello my name is {{name}}</h1>
+      <h2>How are you today?</h2>
+
+
+    </div> -->
+<!-- MAke a form for user input -->
+    <form>
+      <div class="form-group">
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" class="form-control" id="nameInput" [(ngModel)]="name" name="name">
+      </div>
+    </form>
+
+
+    <!-- <div *ngIf="auth" class="">
+      <app-dashboard></app-dashboard>
+      <div *ngIf="">
+
+      </div>
+    </div> -->
+
+ 
+
+    <!-- <div *ngIf="auth"> -->
+      <!-- <div class="text-center">
+        <h2 class="">Greetings {{name.name}}</h2>
+        <h4>What are you planning to do today?</h4>
+      </div> -->
+        <!-- <app-feature-user></app-feature-user> -->
+
+        <!-- <app-dashboard></app-dashboard> -->
+    <!-- </div> -->
+
+
+
+</div>
+
+<!-- <video
+  id="bgVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+>
+  <source src="assets/background.mp4" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video> -->
